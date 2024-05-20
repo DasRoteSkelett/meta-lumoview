@@ -1,0 +1,26 @@
+# about the context of this file.
+header:
+  # The `version` entry in the header describes for which configuration
+  # format version this file was created for. It is used by kas to figure
+  # out if it is compatible with this file. The version is an integer that
+  # is increased on every format change.
+  version: 16
+
+  includes:
+  - base-layers.yml
+
+# Default machine written to local.conf
+machine: myqemux86-64
+
+# Distro for now poky, change later to some generic distro
+distro: poky
+
+target:
+  - lv-core-image
+
+local_conf_header:
+  systemd: |
+    INIT_MANAGER = "systemd"
+
+  instead_of_proper_distro: |
+    DISTRO_FEATURES:append = " rauc virtualization security "

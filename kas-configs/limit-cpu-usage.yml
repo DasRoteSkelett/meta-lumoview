@@ -1,0 +1,20 @@
+# Every file needs to contain a header, that provides kas with information
+# about the context of this file.
+header:
+  # The `version` entry in the header describes for which configuration
+  # format version this file was created for. It is used by kas to figure
+  # out if it is compatible with this file. The version is an integer that
+  # is increased on every format change.
+  version: 16
+
+# This is unfortunately not a one size fits all stuff. Please read
+# about the [pressure stall information](https://docs.kernel.org/accounting/psi.html)
+# If used correctly, it will give you the benefit of having almost no
+# overcommitment (hence, build time slightly decreases) and you may be able
+# to use your PC for some other stuff in the meantime
+local_conf_header:
+  bb_pressure_stuff: |
+    BB_NICE_LEVEL = "11"
+    BB_PRESSURE_MAX_CPU = "20000"
+    BB_PRESSURE_MAX_IO = "20000"
+    BB_PRESSURE_MAX_MEMORY = "5000"
