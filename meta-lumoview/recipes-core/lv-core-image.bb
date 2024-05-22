@@ -9,10 +9,13 @@ IMAGE_INSTALL = " \
     packagegroup-core-full-cmdline \
     packagegroup-core-base-utils \
     random-mqtt-sender \
+    rauc \
     nmap \
 "
 
 IMAGE_FSTYPES = " \
+    wic \
+    tar.bz2 \
     ext4 \
 "
 

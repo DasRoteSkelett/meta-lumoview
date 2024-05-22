@@ -5,7 +5,7 @@ SRC_URI = "git://github.com/DasRoteSkelett/random-mqtt-sender.git;protocol=https
 
 
 PV = "1.0+git"
-SRCREV = "c9035bf2afe96e7ca694301ad33213da76d544d0"
+SRCREV = "3e2e3fd98935f6253b54848895df84aa44594e56"
 
 S = "${WORKDIR}/git"
 

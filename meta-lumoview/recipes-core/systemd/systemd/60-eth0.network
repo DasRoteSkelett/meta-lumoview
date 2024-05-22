@@ -1,0 +1,11 @@
+[Match]
+Type=ether
+
+[Network]
+Description="Internal network for Drives"
+LinkLocalAddressing=no
+DHCP=no
+
+[Address] 
+Address=192.168.7.2/24
+Broadcast=192.168.7.255
